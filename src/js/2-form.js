@@ -45,8 +45,8 @@ function onFormSubmit(event){
 function onFormInput(event){
     const email = event.currentTarget.elements.email.value;
     const message = event.currentTarget.elements.message.value;
-    formData.email = email;
-    formData.message = message;
+    formData.email = email.trim();
+    formData.message = message.trim();
     
     localStorage.setItem(LS_KEY, JSON.stringify(formData));
 }
