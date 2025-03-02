@@ -18,8 +18,10 @@ function startSite() {
         const { email, message } = saveData;
         formEl.elements.email.value = email;
         formEl.elements.message.value = message;
+        formData.email = email.trim();
+        formData.message = message.trim();
     }
-    
+
 }
 
 function onFormSubmit(event){
